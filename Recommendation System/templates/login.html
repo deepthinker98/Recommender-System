@@ -1,0 +1,45 @@
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<br><br><br>
+
+<div style="text-align:center">
+  <h2 style="color: black">MOVIE RECOMMENDATION SYSTEM</h2>
+</div>
+
+
+<br>  
+
+  <div class="container">
+  <form action = "{{ url_for('login') }}" method="POST">
+
+  <h1 style="text-align:center"> Log In </h1>
+  <p>Please fill in this form to log in.</p>
+  <hr>
+    
+<br>
+      <label for="Username"><b>Email</b></label><br>
+
+       <input class="form-control" type="text" name="email" placeholder="Enter Email" required> <br>
+
+
+      <label for="psw"><b>Password</b></label><br>
+
+       <input class="form-control" type="password" name="password" placeholder="Enter Password" required> <br>
+
+
+      <button type="submit" class="btn btn-primary btn-block">Log In</button>
+        <br>
+      <a href="/register" style="color: grey">Register Here</a>
+
+    </form>
+    </div>
+
+  </div>
+
+
+</body>
+</html>

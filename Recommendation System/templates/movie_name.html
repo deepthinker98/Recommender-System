@@ -1,0 +1,108 @@
+<html>
+<head>
+<style>
+* {box-sizing: border-box;}
+
+body {
+  background-image: url("2.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 550px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+}
+.container form {
+    width: 50%;
+    margin: 0 auto;}
+
+/* Full-width input fields */
+.container input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.container input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.container hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+.container button {
+    background-color: #4CAF50;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.container button:hover {
+    opacity:1;
+}
+
+
+/* Float cancel and signup buttons and add an equal width */
+.container .signupbtn {
+  float: right;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    width: 300px;
+    margin: 0 auto;
+    content: "";
+    clear: both;
+    display: inline-block;
+}
+
+}
+</style>
+</head>
+<body>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<br><br><br>
+
+<div style="text-align:center">
+  <h2>MOVIE RECOMMENDATION SYSTEM</h2>
+</div>
+
+<br>  
+
+  <div class="container">
+  <form method="POST" action = "{{ url_for('movie_name') }}">
+
+
+
+  <p>Please fill in this form to get recommendation.</p>
+  <hr>
+    
+       <label for="Username"><b>Movie</b></label><br>
+       <input class="form-control" type="text" name="movie_rec" placeholder="Enter Movie Name" required>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        <br>
+
+    </form>
+  </div>
+
+</body>
+</html>

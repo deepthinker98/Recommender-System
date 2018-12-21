@@ -1,0 +1,82 @@
+* {box-sizing: border-box;}
+
+/*.bg-logo{
+  background: url("{{ url_for ('static', filename = '/static/2.jpg') }}");
+  background-size: 100% 100%;
+  height: 300px;
+  background-size: cover;
+}*/
+
+body {
+  background-image: url({{ url_for('static', filename='/img/2.jpg') }});
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 550px;
+  font-family:sans-serif;
+  color: black;
+  margin: 0;
+}
+.container form {
+    width: 50%;
+    margin: 0 auto;}
+
+/* Full-width input fields */
+.container input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.container input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.container hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+.container button {
+    background-color: #4CAF50;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.container button:hover {
+    opacity:1;
+}
+
+
+/* Float cancel and signup buttons and add an equal width */
+.container .signupbtn {
+  float: right;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    width: 300px;
+    margin: 0 auto;
+    content: "";
+    clear: both;
+    display: inline-block;
+}
+
+

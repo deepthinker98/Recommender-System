@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+*{  box-sizing: border-box; }
+
+body{ margin: 0; font-family: Arial;}
+/* The grid: Four equal columns that floats next to each other */
+.column{
+float: left;
+width: 20%;
+padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+opacity: 0.8; 
+cursor: pointer; 
+}
+
+.column img:hover {
+opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* The expanding image container */
+.container {
+position: relative;
+display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+position: absolute;
+bottom: 15px;
+left: 15px;
+color: white;
+font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+position: absolute;
+top: 10px;
+right: 15px;
+color: white;
+font-size: 35px;
+cursor: pointer;
+} </style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>RECOMMENDED MOVIES</h2>
+  <p>MOVIES:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <!--<img src="url_for('{{ name }}')" id="Movie" name="box1" style="width:100%";">-->
+    <!--<text type="text" id="Movie" name="Movie name" placeholder="Name" >url_for({{name}})</text>-->
+    <img src={{url[0]}}>
+  </div>
+  <img src={{url[1]}}>
+  <img src={{url[2]}}>
+  <img src={{url[3]}}>
+  <img src={{url[4]}}>
+  <img src={{url[5]}}>
+</div>
+<br>
+
+<form method="GET">
+<div class="row">
+  <div class="column" >
+    <!--<text type="text" id="Student name" name="Student name" placeholder="Name" >{{url}}</text>-->
+    <img src="2.jpg" id="Movie1" name="box2" style="width:100%";">
+  </div>
+  <div class="column" >
+    <img src="2.jpg" id="Movie2" name="box3" style="width:100%";">
+  </div>
+  <div class="column" >
+    <img src="2.jpg" id="Movie3" name="box4" style="width:100%";">
+  </div>
+  <div class="column" >
+    <img src="2.jpg" id="Movie4" name="box5" style="width:100%";">
+  </div>
+  <div class="column" >
+    <img src="2.jpg" id="Movie5" name="box6" style="width:100%";">
+  </div>
+</div>
+  
+
+</form>
+
+<p id="new"></p>
+
+<script>
+
+
+</script>
+
+</body>
+</html>
